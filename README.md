@@ -3,7 +3,7 @@ Method and example code to call and pass data between Python module methods and 
 
 Code to enable Python module method calls from MATLAB.  Data is passed between MATLAB and Python as a list.  Also includes example code to illustrate functionality.
 
-**NOTE:** The command "clear classes;" must be present in higher-level function calling this method to force MATLAB to reload the latest version of the executed Python script. 
+**NOTE:** The command "clear classes;" must be present in the higher-level function calling this method to force MATLAB to reload the latest version of the executed Python script. 
 
 ## Files
 ### Program files
