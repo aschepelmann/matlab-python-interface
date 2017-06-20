@@ -17,8 +17,4 @@ Code to enable Python module method calls from MATLAB.  Data is passed between M
 
 ### Example files (These call runPythonMethod.m and pass test data back and forth)
 - examples/exampleScript.m:
-	- Inputs:
-		- None
-	- Output:
-		- None
 - examples/interfaceTest.py
