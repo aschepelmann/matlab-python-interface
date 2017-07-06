@@ -9,11 +9,11 @@ Code to enable Python module method calls from MATLAB.  Data is passed between M
 ### Program files
 - runPythonMethod.m:
 	- Inputs:
-		- inputArray (N-D numerical data)
+		- inputArray ([NxM] dimensional numerical data)
 		- moduleName (String: name of Python module)
 		- methodName (String: name of Python method)
 	- Output:
-		- result (N-D numerical data)
+		- result ([NxM] dimensional numerical data)
 
 ### Example files (These call runPythonMethod.m and pass test data back and forth)
 - examples/exampleScript.m:

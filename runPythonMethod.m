@@ -23,11 +23,16 @@ funcPath=['py.',moduleName,'.',methodName]; % Concatenate function string
 fun=str2func(funcPath); % Create function handle
 
 inputArray=reshape(inputArray,[],1)'; %Reshape to 1xN
-pyList=py.list(inputArray); % Create Python list
-pyList=fun(pyList); % Pass list to Python function
-result=cell(pyList); % Convert list to cell array
-result=reshape(result,inputDims); %Restore original shape
-result=cell2mat(result); % Convert cell array to mat
+if sum(size(inputArray)==[1 1])==2 % Check size of inputArray
+    pyList=inputArray; % inputArray is a scalar, therefore pyList is the scalar
+    result=pyList;
+else
+    pyList=py.list(inputArray); % Create Python list
+    pyList=fun(pyList); % Pass list to Python function
+    result=cell(pyList); % Convert list to cell array
+    result=reshape(result,inputDims); %Restore original shape
+    result=cell2mat(result); % Convert cell array to mat
+end
 
 end
 

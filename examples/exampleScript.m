@@ -16,6 +16,10 @@ clear classes; % Clear from memory and reload Python module
 moduleName='interfaceTest';
 methodName='doubleList';
 
+testArray=[1]; % Declare single element test array (scalar)
+result=runPythonMethod(testArray,moduleName,methodName);
+disp(result)
+
 testArray=[1,2,3,4,5]; % Declare 1D test array
 result=runPythonMethod(testArray,moduleName,methodName);
 disp(result)

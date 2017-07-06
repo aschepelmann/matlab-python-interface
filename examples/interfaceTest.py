@@ -5,9 +5,12 @@
 @description: Python module to double elements of argument.
 """
 def doubleList(x):
-    y=[0]*len(x) #Pre-allocate new list
-    for i in range(len(x)):
-        y[i]=x[i]*2
+    if isinstance(x,list): #x is a list
+        y=[0]*len(x) #Pre-allocate new list
+        for i in range(len(x)):
+            y[i]=x[i]*2
+    else: #x is a scalar
+        y=x*2
     return y
 
 def main():
