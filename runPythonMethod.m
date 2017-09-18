@@ -25,7 +25,7 @@ fun=str2func(funcPath); % Create function handle
 inputArray=reshape(inputArray,[],1)'; %Reshape to 1xN
 if sum(size(inputArray)==[1 1])==2 % Check size of inputArray
     pyList=inputArray; % inputArray is a scalar, therefore pyList is the scalar
-    result=pyList;
+    result=fun(pyList);
 else
     pyList=py.list(inputArray); % Create Python list
     pyList=fun(pyList); % Pass list to Python function
